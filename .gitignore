@@ -1,0 +1,15 @@
+data/
+*.log
+*.mp4
+*.mkv
+*.mov
+*.webm
+*.avi
+*.m4v
+*.flv
+*.wav
+*.mp3
+*.ts
+.env
+.env.*
+*.local.json

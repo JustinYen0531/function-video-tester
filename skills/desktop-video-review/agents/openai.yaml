@@ -1,0 +1,6 @@
+interface:
+  display_name: "本機錄影驗收"
+  short_description: "從本機捷徑開啟功能並錄影，區分日常維護與展示工作，交由你審查結果"
+  default_prompt: "使用 $desktop-video-review 為這次功能製作本機錄影驗收，先分類並保留人工通過決定。"
+policy:
+  allow_implicit_invocation: true

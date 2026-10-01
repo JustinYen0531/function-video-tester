@@ -1,0 +1,12 @@
+{
+  "project": "你的專案名稱",
+  "ticket": "這次完成的工作項目",
+  "category": "confirmation",
+  "reason": "這是新的操作流程，需要使用者確認",
+  "version": "填寫 Git 提交編號",
+  "video": null,
+  "result": "尚未錄製：範例資料，請替換成真實結果",
+  "items": [{"time": "00:00", "feature": "測試功能名稱", "result": "實際看到的結果"}],
+  "untested": ["尚未測試的項目"],
+  "retries": ["失敗或重試經過；沒有則使用空陣列"]
+}
