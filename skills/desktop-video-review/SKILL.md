@@ -1,6 +1,6 @@
 ---
 name: desktop-video-review
-description: Record local Windows feature acceptance walkthroughs using Codex Computer Use and OBS, after a ticket or section completes or when the user requests an immediate review. Classify maintenance versus new or showcase behavior and leave final acceptance to the user.
+description: On use, automatically enroll the current local project in the configured video review center and register acceptance recordings. Record Windows walkthroughs with Computer Use and OBS, classify maintenance versus confirmation work, and leave approval to the user.
 ---
 
 # 本機錄影驗收
@@ -18,6 +18,8 @@ description: Record local Windows feature acceptance walkthroughs using Codex Co
 - 即時要求沿用相同分類規則。只有使用者能將「待審查」改為「人工通過」或「需要修改」。可继续工作不等於已驗收。
 
 ## 前置確認
+
+使用本技能就預設透過驗收影片中心交付，不再詢問是否加入。先讀取 [中心接入說明](references/center.md)，定位中心、讀取共同專案名錄，按當前專案的本機資料夾自動加入或取用既有專案。使用者手動加入的專案也在同一份名錄；缺少 Git 或捷徑不阻擋加入。只處理當前已授權專案，不掃描其他專案，不更改全域指引或該專案 AGENTS.md；加入中心不擴張操作電腦、錄影或修改專案的權限。
 
 1. 回報目前步驟，讀取專案規則、這次需求及已界定工作範圍。列出要演示的行為與預期結果，僅釐清真正缺少的資訊。
 2. 檢查當前是否已允許本次操作與錄影。本技能不能自行覆蓋仍有效的禁止瀏覽器或錄影規則；使用者明確放寬的範圍優先，勿重複詢問已授權的事。
@@ -40,6 +42,6 @@ description: Record local Windows feature acceptance walkthroughs using Codex Co
 
 ## 驗收紀錄
 
-採用驗收影片中心時，錄製後（包括失敗）讀取中心根目錄 [README 的各專案登記](../../README.md)，使用 `register.js` 將每次結果加入同一個本機中心。若技能已複製到獨立安裝目錄，相對連結不再指向中心，請使用專案規則記載的中心路徑；未記載時只詢問中心位置。影片不複製到 Git，人工通過只能由使用者決定。
+錄製後（包括失敗）依 [中心接入說明](references/center.md) 的 record 命令寫入同一個本機中心。確認回傳紀錄編號及待審查狀態，再交付。中心定位、加入或結果登記失敗時，明說驗收交付尚未完整完成；保留原始影片、結果檔及待登記副本，不默認登記成功。維護類也要先完成中心登記才符合交付後繼續的條件；等待確認類仍等待人工確認。影片不複製到 Git，人工通過只能由使用者決定。
 
 每次記錄：工作項目、分類與理由、對應版本、錄影檔、驗收項目及時間點、實際結果、未測範圍、重試、人工審查狀態、是否等待。對使用者以繁體中文及一般用語回報，每完成一步回報結果。

@@ -1,5 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
+& node.exe (Join-Path $root 'skills\desktop-video-review\scripts\center.js') configure $root
+if ($LASTEXITCODE -ne 0) { throw '中心位置設定失敗' }
 $url = 'http://127.0.0.1:43127'
 try { $response = Invoke-RestMethod "$url/api/records" -TimeoutSec 2; $ready = $true } catch { $ready = $false }
 if (-not $ready) {
